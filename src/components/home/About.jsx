@@ -1,11 +1,12 @@
 // src/components/home/about.jsx
+import aboutimg from '../../assets/img/about.jpg'
 const About = () => {
   return (
     <div className="container-fluid py-5">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-5 pb-4 pb-lg-0">
-            <img className="img-fluid w-100" src="/img/about.jpg" alt="" />
+            <img className="img-fluid w-100" src={aboutimg} alt="" />
             <div className="bg-primary text-dark text-center p-4">
               <h3 className="m-0">25+ Years Experience</h3>
             </div>
