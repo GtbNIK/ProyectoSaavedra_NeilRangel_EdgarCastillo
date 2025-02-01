@@ -1,3 +1,11 @@
+Para correr el proyecto
+npm install
+npm install @fortawesome/fontawesome-free
+npm run dev
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
