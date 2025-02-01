@@ -9,6 +9,7 @@ import PricesPage from './pages/PricesPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import Footer from './components/common/footer';
+import Form from './pages/Form';
 import BackToTop from './components/common/backtoTop';
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/blog.html" element={<BlogPage />} />
           <Route path="/prices.html" element={<PricesPage />} />
           <Route path="/contact.html" element={<ContactPage />} />
+          <Route path="/form.html" element={<Form />} />
         </Routes>
         <Footer />
         <BackToTop />

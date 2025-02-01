@@ -22,7 +22,7 @@ const Navbar = () => {
                         <Link to="/blog.html" className={`nav-item nav-link ${location.pathname === '/blog.html' ? 'active' : ''}`}>Blog</Link>
                         <Link to="/contact.html" className={`nav-item nav-link ${location.pathname === '/contact.html' ? 'active' : ''}`}>Contact</Link>
                     </div>
-                    <a href="" className="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
+                    <a href="form.html" className="btn btn-primary py-2 px-4 d-none d-lg-block">Login</a>
                 </div>
             </nav>
         </div>
