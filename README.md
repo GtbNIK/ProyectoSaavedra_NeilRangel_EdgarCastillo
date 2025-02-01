@@ -1,7 +1,10 @@
 Para correr el proyecto
 npm install
 npm install @fortawesome/fontawesome-free
+npm install leaflet
+npm install leaflet-control-geocoder
 npm run dev
+
 
 
 
