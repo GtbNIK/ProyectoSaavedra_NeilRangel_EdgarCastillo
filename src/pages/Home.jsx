@@ -24,7 +24,6 @@ const Home = () => {
       <Team />
       <Testimonial />
       <Blog />
-      <BackToTop />
     </>
   );
 };

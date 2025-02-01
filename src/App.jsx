@@ -9,6 +9,7 @@ import PricesPage from './pages/PricesPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import Footer from './components/common/footer';
+import BackToTop from './components/common/backtoTop';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact.html" element={<ContactPage />} />
         </Routes>
         <Footer />
+        <BackToTop />
       </div>
     </Router>
   );

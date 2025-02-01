@@ -1,30 +1,32 @@
 // src/components/layout/Navbar.jsx
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+    const location = useLocation(); // Obtiene la ubicación actual
+
     return (
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 display-5 text-uppercase text-primary"><i class="fa fa-truck mr-2"></i>Faster</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav m-auto py-0">
-                    <a href="home.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
-                    <a href="prices.html" class="nav-item nav-link">Prices</a>
-                    <a href="blog.html" class="nav-item nav-link">Blog</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+        <div className="container-fluid p-0">
+            <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+                <a href="index.html" className="navbar-brand ml-lg-3">
+                    <h1 className="m-0 display-5 text-uppercase text-primary"><i className="fa fa-truck mr-2"></i>Faster</h1>
+                </a>
+                <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                    <div className="navbar-nav m-auto py-0">
+                        <Link to="/" className={`nav-item nav-link ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
+                        <Link to="/about.html" className={`nav-item nav-link ${location.pathname === '/about.html' ? 'active' : ''}`}>About</Link>
+                        <Link to="/service.html" className={`nav-item nav-link ${location.pathname === '/service.html' ? 'active' : ''}`}>Service</Link>
+                        <Link to="/prices.html" className={`nav-item nav-link ${location.pathname === '/prices.html' ? 'active' : ''}`}>Prices</Link>
+                        <Link to="/blog.html" className={`nav-item nav-link ${location.pathname === '/blog.html' ? 'active' : ''}`}>Blog</Link>
+                        <Link to="/contact.html" className={`nav-item nav-link ${location.pathname === '/contact.html' ? 'active' : ''}`}>Contact</Link>
+                    </div>
+                    <a href="" className="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
                 </div>
-                <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
-            </div>
-        </nav>
-    </div>
-);
+            </nav>
+        </div>
+    );
 };
 
 export default Navbar;

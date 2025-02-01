@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const QuoteRequest = () => {
+    const [skilledExperts, setSkilledExperts] = useState(0);
+    const [happyClients, setHappyClients] = useState(0);
+    const [completeProjects, setCompleteProjects] = useState(0);
+
+    useEffect(() => {
+        const countUp = (target, setter) => {
+            let count = 0;
+            const interval = setInterval(() => {
+                if (count < target) {
+                    count++;
+                    setter(count);
+                } else {
+                    clearInterval(interval); // Detener el contador al alcanzar el objetivo
+                    setter(target); // Asegurarse de que se establezca el valor objetivo
+                }
+            }, 1); // Ajusta la velocidad del conteo aquí
+        };
+
+        // Iniciar los contadores
+        countUp(225, setSkilledExperts);
+        countUp(738, setHappyClients);
+        countUp(1050, setCompleteProjects);
+    }, []);
+
     return (
         <div className="container-fluid bg-secondary my-5">
             <div className="container">
@@ -11,15 +35,15 @@ const QuoteRequest = () => {
                         <p className="mb-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et...</p>
                         <div className="row">
                             <div className="col-sm-4">
-                                <h1 className="text-primary mb-2" data-toggle="counter-up">225</h1>
+                                <h1 className="text-primary mb-2">{skilledExperts}</h1>
                                 <h6 className="font-weight-bold mb-4">Skilled Experts</h6>
                             </div>
                             <div className="col-sm-4">
-                                <h1 className="text-primary mb-2" data-toggle="counter-up">1050</h1>
+                                <h1 className="text-primary mb-2">{happyClients}</h1>
                                 <h6 className="font-weight-bold mb-4">Happy Clients</h6>
                             </div>
                             <div className="col-sm-4">
-                                <h1 className="text-primary mb-2" data-toggle="counter-up">2500</h1>
+                                <h1 className="text-primary mb-2">{completeProjects}</h1>
                                 <h6 className="font-weight-bold mb-4">Complete Projects</h6>
                             </div>
                         </div>
