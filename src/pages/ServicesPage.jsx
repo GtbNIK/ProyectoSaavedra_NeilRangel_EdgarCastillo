@@ -1,25 +1,25 @@
-import About from "../components/home/About";
-import Features from "../components/home/Features";
-import Team from "../components/home/Team";
+import Services from "../components/home/Services";
+import QuoteRequest from "../components/home/QuoteRequest";
+import Testimonial from "../components/home/Testimonial";
 
-const AboutPage = () => {
+const ServicesPage = () => {
     return(
         <>
         <div class="jumbotron jumbotron-fluid mb-5">
             <div class="container text-center py-5">
-                <h1 class="text-white display-3">About</h1>
+                <h1 class="text-white display-3">Services</h1>
                 <div class="d-inline-flex align-items-center text-white">
                     <p class="m-0"><a class="text-white" href="home.html">Home</a></p>
                     <i class="fa fa-circle px-3"></i>
-                    <p class="m-0">About</p>
+                    <p class="m-0">Services</p>
                 </div>
             </div>
         </div>
-        <About />
-        <Features />
-        <Team />
+            < Services />
+            < QuoteRequest />
+            < Testimonial />
         </>
     )
 }
 
-export default AboutPage;
+export default ServicesPage;

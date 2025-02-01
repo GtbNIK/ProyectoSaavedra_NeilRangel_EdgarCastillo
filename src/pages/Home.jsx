@@ -9,7 +9,6 @@ import PricingPlan from '../components/home/PricingPlan';
 import Team from '../components/home/Team';
 import Testimonial from '../components/home/Testimonial';
 import Blog from '../components/home/Blog';
-import Footer from '../components/common/footer';
 import BackToTop from '../components/common/backtoTop';
 
 const Home = () => {
@@ -25,7 +24,6 @@ const Home = () => {
       <Team />
       <Testimonial />
       <Blog />
-      <Footer />
       <BackToTop />
     </>
   );
